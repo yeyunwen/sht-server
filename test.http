@@ -1,0 +1,28 @@
+# GET http://127.0.0.1:3000/admin/allUser HTTP/1.1
+
+
+# POST http://127.0.0.1:3000/user/info HTTP/1.1
+
+# Content-Type: application/json
+# {
+#   "user": "1231231",
+#   "name": "yyw"
+# }
+
+POST http://127.0.0.1:3000/admin/getUserInfo HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer ayJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzEwNDA1MTczfQ.MaUiWBrgUkx5hc9oZcdLGtcSgQB2-sozhqAxWSVgcZY
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+# POST http://127.0.0.1:3000/admin/register HTTP/1.1
+# Content-Type: application/json
+
+# {
+#   "username": "admin",
+#   "password": "123456",
+#   "salt": "yyw666"
+# }

@@ -1,0 +1,74 @@
+<mxfile host="65bd71144e">
+    <diagram id="fpXbY79oZZ7wLSrb3fOt" name="第 1 页">
+        <mxGraphModel dx="606" dy="692" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2" target="12">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="70" y="310" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="普通用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="107" y="293" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="用户管理" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="214" y="168" width="200" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="用户注册/登录" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="10">
+                    <mxGeometry x="50" y="40" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="文化科普" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="10">
+                    <mxGeometry x="50" y="90" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="旅游推荐" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="10">
+                    <mxGeometry x="50" y="140" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="商品筛选/查看" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="10">
+                    <mxGeometry x="50" y="195" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="购物车" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="10">
+                    <mxGeometry x="50" y="250" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="订单页面" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="10">
+                    <mxGeometry x="50" y="300" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="33" target="12">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="503" y="302" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="33" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="509" y="291" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="33" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="33" target="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="300" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" style="edgeStyle=none;html=1;" edge="1" parent="1" target="18">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="507" y="310" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="登录用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="288" width="30" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
