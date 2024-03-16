@@ -1,5 +1,6 @@
-import express, { ErrorRequestHandler } from "express";
+import express from "express";
 import admin from "@/router/admin";
+import files from "@/router/files";
 import { errHandler } from "@/middleware";
 import { expressjwt } from "express-jwt";
 import { JWT_SECRET, unAuthList } from "@/constant";
@@ -14,8 +15,12 @@ app.use(
   })
 );
 
+// Static
+app.use(express.static("public"));
+
 // Router
 app.use("/admin", admin);
+app.use("/files", files);
 
 // Error
 app.use(errHandler);
