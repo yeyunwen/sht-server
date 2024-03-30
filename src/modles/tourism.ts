@@ -35,6 +35,7 @@ export default (sequelize: Sequelize) => {
     },
     {
       timestamps: false,
+      tableName: "tourism",
     }
   );
 };

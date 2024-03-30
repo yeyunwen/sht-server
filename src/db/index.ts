@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 import AdminModel from "@/modles/admin";
 import TourismModel from "@/modles/tourism";
+import UserModel from "@/modles/user";
 
 const sequelize = new Sequelize({
   dialect: "mysql",
@@ -13,8 +14,9 @@ const sequelize = new Sequelize({
 
 const Admin = AdminModel(sequelize);
 const Tourism = TourismModel(sequelize);
+const User = UserModel(sequelize);
 
 // sequelize.sync();
 
 export default sequelize;
-export { Admin, Tourism };
+export { Admin, Tourism, User };
