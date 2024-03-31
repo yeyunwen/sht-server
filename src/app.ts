@@ -3,6 +3,7 @@ import admin from "@/router/admin";
 import files from "@/router/files";
 import tourism from "@/router/tourism";
 import user from "@/router/user";
+import product from "@/router/product";
 import { errHandler } from "@/middleware";
 import { expressjwt } from "express-jwt";
 import { JWT_SECRET, unAuthList } from "@/constant";
@@ -28,6 +29,7 @@ app.use("/admin", admin);
 app.use("/files", files);
 app.use("/tourism", tourism);
 app.use("/user", user);
+app.use("/product", product);
 
 // Error
 app.use(errHandler);

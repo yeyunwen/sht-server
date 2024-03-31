@@ -12,4 +12,10 @@ export const unAuthList = [
   "/user/register",
   "/user/login",
   //#endregion
+
+  //#region 产品相关
+  "/product/list",
+  /^\/product\/detail/,
+  "/product/recommend",
+  //#endregion
 ];
