@@ -18,19 +18,31 @@ export const login: RequestHandler = async (req, res) => {
     where.phone = contact;
   }
 
-  debugger;
-  const result = await User.findOne({
+  const user = await User.findOne({
     where: {
       ...where,
-      password: encryptMD5(password),
     },
   });
+
+  if (!user) {
+    return res.send({
+      code: ResCode.BAD_REQUEST,
+      msg: "用户不存在",
+    });
+  }
+  if (user.password !== encryptMD5(password)) {
+    return res.send({
+      code: ResCode.BAD_REQUEST,
+      msg: "密码错误",
+    });
+  }
+  const result = user;
 
   const token = jwt.sign(
     {
       phone: contact,
-      username: result?.dataValues.username,
-      userId: result?.dataValues.id,
+      username: result.username,
+      userId: result.id,
     },
     JWT_SECRET
   );
@@ -73,4 +85,13 @@ export const register: RequestHandler = async (req, res) => {
   } catch (error) {
     res.send(error);
   }
+};
+
+export const getUserList: RequestHandler = async (req, res) => {
+  const result = await User.findAll();
+  res.send({
+    code: ResCode.SUCCESS,
+    msg: "success",
+    data: result,
+  });
 };

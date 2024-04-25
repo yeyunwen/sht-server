@@ -4,11 +4,14 @@ import files from "@/router/files";
 import tourism from "@/router/tourism";
 import user from "@/router/user";
 import product from "@/router/product";
+import cart from "@/router/cart";
+import culture from "@/router/culture";
 import { errHandler } from "@/middleware";
 import { expressjwt } from "express-jwt";
 import { JWT_SECRET, unAuthList } from "@/constant";
 import { host } from "@/config";
 import cors from "cors";
+import { log } from "node:console";
 
 const app = express();
 
@@ -30,6 +33,12 @@ app.use("/files", files);
 app.use("/tourism", tourism);
 app.use("/user", user);
 app.use("/product", product);
+app.use("/cart", cart);
+app.use("/culture", culture);
+
+app.use('/test', (req, res) => {
+  log(req)
+})
 
 // Error
 app.use(errHandler);

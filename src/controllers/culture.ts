@@ -1,10 +1,10 @@
 import { RequestHandler } from "express";
-import { Product } from "@/db";
+import { Culture } from "@/db";
 import { ResCode } from "@/constant";
 
 export const getList: RequestHandler = async (req, res) => {
   const { category } = req.query;
-  const list = await Product.findAll({
+  const list = await Culture.findAll({
     where: {
       ...(category && {
         category,
@@ -20,9 +20,9 @@ export const getList: RequestHandler = async (req, res) => {
     },
   });
 };
-export const addProduct: RequestHandler = async (req, res) => {
+export const addCulture: RequestHandler = async (req, res) => {
   console.log("req.body", req.body);
-  const result = await Product.create({
+  const result = await Culture.create({
     ...req.body,
   });
 
@@ -32,8 +32,8 @@ export const addProduct: RequestHandler = async (req, res) => {
   });
 };
 
-export const updateProduct: RequestHandler = async (req, res) => {
-  const result = await Product.update(
+export const updateCulture: RequestHandler = async (req, res) => {
+  const result = await Culture.update(
     {
       ...req.body,
     },
@@ -49,9 +49,9 @@ export const updateProduct: RequestHandler = async (req, res) => {
   });
 };
 
-export const getProductDetail: RequestHandler = async (req, res) => {
+export const getCultureDetail: RequestHandler = async (req, res) => {
   const { id } = req.params;
-  const result = await Product.findOne({
+  const result = await Culture.findOne({
     where: {
       id,
     },
@@ -64,9 +64,9 @@ export const getProductDetail: RequestHandler = async (req, res) => {
   });
 };
 
-export const deleteProduct: RequestHandler = async (req, res) => {
+export const deleteCulture: RequestHandler = async (req, res) => {
   const { id } = req.body;
-  const result = await Product.destroy({
+  const result = await Culture.destroy({
     where: {
       id,
     },
@@ -78,8 +78,8 @@ export const deleteProduct: RequestHandler = async (req, res) => {
   });
 };
 
-export const getRecommendProduct: RequestHandler = async (req, res) => {
-  const list = await Product.findAll({
+export const getRecommendCulture: RequestHandler = async (req, res) => {
+  const list = await Culture.findAll({
     where: {
       recommend: 1,
     },

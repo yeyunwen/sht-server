@@ -1,8 +1,17 @@
-import { DataTypes, Sequelize } from "sequelize";
+import { DataTypes, Sequelize, Model } from "sequelize";
+
+export class Product extends Model {
+  declare id: number;
+  declare name: string;
+  declare price: number;
+  declare image: string;
+  declare category: number;
+  declare description: string;
+  declare recommend: number;
+}
 
 export default (sequelize: Sequelize) => {
-  return sequelize.define(
-    "product",
+  Product.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -48,8 +57,11 @@ export default (sequelize: Sequelize) => {
       },
     },
     {
+      sequelize,
       timestamps: false,
       tableName: "product",
     }
   );
+
+  return Product;
 };

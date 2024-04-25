@@ -4,7 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "sync:force": "tsx ./src/db/sync.ts mode=force",
+    "sync:alter": "tsx ./src/db/sync.ts mode=alter"
   },
   "keywords": [],
   "author": "",

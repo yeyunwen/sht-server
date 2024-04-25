@@ -1,62 +1,64 @@
 import { DataTypes, Sequelize, Model } from "sequelize";
-import { Cart } from "./cart";
 
-class User extends Model {
+export class Culture extends Model {
   declare id: number;
-  declare username: string;
-  declare password: string;
-  declare email: string;
-  declare phone: string;
-  declare Cart: Cart;
+  declare title: string;
+  declare cover: string;
+  declare category: number;
+  declare description: string;
+  declare content: string;
 }
 
 export default (sequelize: Sequelize) => {
-  User.init(
+  Culture.init(
     {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      username: {
+      title: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notEmpty: true,
         },
       },
-      password: {
+      cover: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notEmpty: true,
         },
       },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      category: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
         validate: {
-          isEmail: {
-            msg: "邮箱格式不正确",
-          },
+          notEmpty: true,
         },
-        unique: true,
       },
-      phone: {
+      description: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
         validate: {
-          is: /^1[3456789]\d{9}$/,
+          notEmpty: true,
         },
-        unique: true,
+      },
+      content: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          notEmpty: true,
+        },
       },
     },
     {
       sequelize,
       timestamps: false,
-      tableName: "user",
+      tableName: "culture",
     }
   );
 
-  return User;
+  return Culture;
 };

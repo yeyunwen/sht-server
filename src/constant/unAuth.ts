@@ -18,4 +18,12 @@ export const unAuthList = [
   /^\/product\/detail/,
   "/product/recommend",
   //#endregion
+
+  //#region 文化相关
+  "/culture/list",
+  /^\/culture\/detail/,
+  "/culture/recommend",
+  //#endregion
+
+  /^\/test/
 ];

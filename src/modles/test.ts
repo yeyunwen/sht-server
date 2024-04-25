@@ -1,17 +1,16 @@
 import { DataTypes, Sequelize, Model } from "sequelize";
-import { Cart } from "./cart";
 
-class User extends Model {
+class Test extends Model {
   declare id: number;
   declare username: string;
   declare password: string;
   declare email: string;
-  declare phone: string;
-  declare Cart: Cart;
+  declare readonly createdAt: Date;
+  declare readonly updatedAt: Date;
 }
 
 export default (sequelize: Sequelize) => {
-  User.init(
+  Test.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -32,31 +31,9 @@ export default (sequelize: Sequelize) => {
           notEmpty: true,
         },
       },
-      email: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          isEmail: {
-            msg: "邮箱格式不正确",
-          },
-        },
-        unique: true,
-      },
-      phone: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          is: /^1[3456789]\d{9}$/,
-        },
-        unique: true,
-      },
     },
-    {
-      sequelize,
-      timestamps: false,
-      tableName: "user",
-    }
+    { sequelize }
   );
 
-  return User;
+  return Test;
 };
