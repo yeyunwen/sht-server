@@ -15,6 +15,7 @@ export const unAuthList = [
 
   //#region 产品相关
   "/product/list",
+  "/product/search",
   /^\/product\/detail/,
   "/product/recommend",
   //#endregion
@@ -25,5 +26,5 @@ export const unAuthList = [
   "/culture/recommend",
   //#endregion
 
-  /^\/test/
+  /^\/test/,
 ];
